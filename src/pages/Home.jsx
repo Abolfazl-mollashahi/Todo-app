@@ -18,7 +18,7 @@ function Home() {
       <Header darkMode={darkMode} setDarkMode={setDarkMode}  />
 
       {
-        flags.user && <User darkMode={darkMode}  />
+        flags.taghvim && <User darkMode={darkMode}  />
       }
 
       

@@ -11,7 +11,7 @@ function Header({darkMode , setDarkMode}) {
     <img src={person} alt="Profile" className="w-[70px] h-[70px] mask mask-hexagon  rounded-full" />
       <p>Good evening, Ivy</p>
     </div>
-      <button className={' scale-100 hover:scale-110  mask mask-hexagon p-2  bg-red-400  border  border-violet-900'}  onClick={() => setDarkMode(!darkMode)}>
+      <button className={' scale-100 hover:scale-110  mask mask-hexagon p-2  bg-red-400  '}  onClick={() => setDarkMode(!darkMode)}>
         {darkMode ? <IoSunnyOutline size={35}  /> : <CiDark size={35} />}
       </button>
   </header>
