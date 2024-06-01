@@ -6,6 +6,7 @@ import Taghvim from "./Taghvim";
 function CreateTodo({ darkmode }) {
   const [flagTaghvim, setflagTaghvim] = useState(false);
   const [flagTaghvim2, setflagTaghvim2] = useState(false);
+  const [db, setdb] = useState([]);
 
   const [TodoData, setTodoData] = useState({
     text: "",
@@ -40,7 +41,7 @@ function CreateTodo({ darkmode }) {
 
   return (
     <div className={`p-4 ${darkmode ? "bg-white " : ""} relative `}>
-      <div className="space-y-4">
+      <div dir="ltr"  className="space-y-4">
         <div>
           <label className="block my-2  text-gray-700 dark:text-gray-200">
             متن
@@ -92,6 +93,9 @@ function CreateTodo({ darkmode }) {
           </div>
           {flagTaghvim2 && <Taghvim date={TodoData.endDate} setDate={handelenddate} darkmode={darkmode} setflagTaghvim={setflagTaghvim2}   />}
         </div>
+
+        <button className=" p-4  mask mask-hexagon bg-green-700 text-white" >save</button>
+        <button className=" p-4  mask mask-hexagon bg-red-700 text-white" >cancel</button>
         
       </div>
     </div>
